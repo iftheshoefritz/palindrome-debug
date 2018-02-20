@@ -16,4 +16,8 @@ describe 'palindrome' do
   it 'returns true for " abba "' do
     expect(palindrome(' abba ')).to eq(true)
   end
+
+  it 'returns true for " AbbA "' do
+    expect(palindrome(' AbbA ')).to eq(true)
+  end
 end
