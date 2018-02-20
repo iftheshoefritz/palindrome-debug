@@ -24,4 +24,8 @@ describe 'palindrome' do
   it 'returns FALSE for "Able was i ere i saw elba"' do
     expect(palindrome('Able was i ere i saw elba')).to eq(false)
   end
+  
+  it 'empty lines are palindromes too!' do
+    expect(palindrome('  ')).to eq(true)
+  end
 end
