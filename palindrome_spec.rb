@@ -25,15 +25,23 @@ describe 'palindrome' do
     expect(palindrome('able was i ere i saw elba')).to eq(true)
   end
 
+  it 'returns FALSE for "Able was i ere i saw elba"' do
+    expect(palindrome('Able was i ere i saw elba')).to eq(false)
+  end
+
+  it 'returns true for "aaa "' do
+    expect(palindrome('aaa ')).to eq(true)
+  end
+
+  it 'returns true for " aaa"' do
+    expect(palindrome(' aaa')).to eq(true)
+  end
+
   it 'returns true for "aaa"' do
     expect(palindrome('aaa')).to eq(true)
   end
 
   it 'returns true for "aaabbcbbaaa"' do
     expect(palindrome('aaabbcbbaaa')).to eq(true)
-  end
-
-  it 'returns true for "Aaa"' do
-    expect(palindrome('Aaa')).to eq(true)
   end
 end
