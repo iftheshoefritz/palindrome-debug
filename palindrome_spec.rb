@@ -1,11 +1,11 @@
 require './palindrome'
 
 describe 'palindrome' do
-  it 'returns true for aaaa' do
+  it 'returns true for a string of the same character' do
     expect(palindrome('aaaa')).to eq(true)
   end
 
-  it 'returns false for abab' do
+  it 'returns false for non-repeating characters' do
     expect(palindrome('abab')).to eq(false)
   end
 
@@ -13,15 +13,15 @@ describe 'palindrome' do
     expect(palindrome('abba')).to eq(true)
   end
 
-  it 'returns true for " abba "' do
+  it 'handles whitespace' do
     expect(palindrome(' abba ')).to eq(true)
   end
 
-  it 'returns true for " AbbA "' do
+  it 'handles capitalisation' do
     expect(palindrome(' AbbA ')).to eq(true)
   end
 
-  it 'returns FALSE for "Able was i ere i saw elba"' do
+  it 'returns FALSE for uneven capitalisation' do
     expect(palindrome('Able was i ere i saw elba')).to eq(false)
   end
   
