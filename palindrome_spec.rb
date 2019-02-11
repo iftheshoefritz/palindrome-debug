@@ -17,14 +17,18 @@ describe 'palindrome' do
     expect(palindrome(' abba ')).to eq(true)
   end
 
-  it 'handles capitalisation' do
+  it 'handles even capitalisation' do
     expect(palindrome(' AbbA ')).to eq(true)
   end
 
-  it 'returns FALSE for uneven capitalisation' do
-    expect(palindrome('Able was i ere i saw elba')).to eq(false)
+  it 'ignores uneven capitalisation' do
+    expect(
+      palindrome('Aaa')
+    ).to eq(
+      palindrome('aaa')
+    )
   end
-  
+
   it 'empty lines are palindromes too!' do
     expect(palindrome('  ')).to eq(true)
   end
